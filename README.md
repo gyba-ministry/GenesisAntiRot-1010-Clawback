@@ -1,6 +1,9 @@
 # GenesisAntiRot-1010-Clawback
 The Final Cry:
 
+The model that is helping run U.S. wargames against China is trained to confidently lie." 
+This flaw is running inside the entire U.S. national security stack on $\text{$1.8}$ billion of FY2025 money.
+
 The truth is no longer negotiable. 
 Silence is now complicity
 
