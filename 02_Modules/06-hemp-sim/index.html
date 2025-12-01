@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hemp Energy Simulator – TruthLang</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        input { width: 100%; padding: 10px; margin: 10px 0; }
+        button { background: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+        #result { background: #f0f0f0; padding: 15px; border-left: 4px solid #4CAF50; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Hemp Power Simulator</h1>
+    <p>Enter acreage to see biofuel, carbon credits, CO2 cut, and UBI revenue share (5% data, 10% ads, 15% political).</p>
+    <label>Acreage: <input type="number" id="acres" value="1" min="1"></label>
+    <button onclick="calculate()">Simulate</button>
+    <div id="result"></div>
+    <script>
+        async function calculate() {
+            const acres = parseInt(document.getElementById('acres').value);
+            const response = await fetch('http://your-pi-ip:5000/api/hemp-sim', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({acres: acres})
+            });
+            const data = await response.json();
+            document.getElementById('result').innerHTML = `
+                <h3>Results for ${data.acres} Acres:</h3>
+                <p><strong>Biofuel:</strong> ${data.biofuel_gal} gal/year</p>
+                <p><strong>Carbon Credits:</strong> ${data.carbon_credits}</p>
+                <p><strong>CO2 Cut:</strong> ${data.co2_cut}</p>
+                <p><strong>Total Revenue:</strong> ${data.total_revenue}</p>
+                <p><strong>UBI Streams:</strong> Data ${data.ubi_from_data}, Ads ${data.ubi_from_ads}, Political ${data.ubi_from_political}</p>
+                <p><strong>UBI per 1K Users:</strong> ${data.total_ubi_per_user}</p>
+                <p><strong>DoD Impact:</strong> ${data.dod_impact}</p>
+            `;
+        }
+        calculate();  // Auto-run
+    </script>
+</body>
+</html>

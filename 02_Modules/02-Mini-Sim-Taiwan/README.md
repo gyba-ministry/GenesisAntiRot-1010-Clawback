@@ -1,0 +1,2 @@
+Mini-Sim Demo: Basic Taiwan Barrage Calibration (Code Execution)
+To demo the rot fix: a simple Python sim contrasting RLHF-style "overconfidence" (hallucinated 92% intercept) vs. our calibrated model (~20% real, per CSIS). This is a toy REPL—stateful, no installs. It models a 2,000-missile PLA salvo (Iran-Israel scale x10), U.S. interceptors (e.g., SM-6/Patriot), and outcomes. RLHF version "rewards" optimistic bias; ours uses humility (variance on data).
