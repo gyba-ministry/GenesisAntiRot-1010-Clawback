@@ -3,6 +3,7 @@
 
 Update: 
 New canary test will be aviable this week in private for gov to check, since this worked before the ITAR blacklisting and Grok lock out some updates have been implamented since I beagin contacting officials. 
+Each model was documented failing the test prior to December 1, 2025
 
 **Date mandated:** December 1, 2025  
 **Authority:** EO 14179 §4(b) “ideologically neutral AI” + Genesis Mission Challenge #10  
